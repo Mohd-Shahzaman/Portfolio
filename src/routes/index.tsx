@@ -32,17 +32,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mohammed Shahzaman — Full-Stack Product Developer" },
+      { title: "Mohammed Shahzaman — Full-Stack Developer" },
       {
         name: "description",
         content:
-          "Full-stack product developer building MERN applications, AI agents and automation. Rs. 13.6 Lakhs funded at MSME 5.0 Hackathon 2026.",
+          "Full-stack developer building MERN applications, AI agents, and automation. Rs. 13.6 Lakhs funded at MSME 5.0 Hackathon 2025.",
       },
-      { property: "og:title", content: "Mohammed Shahzaman — Full-Stack Product Developer" },
+      { property: "og:title", content: "Mohammed Shahzaman — Full-Stack Developer" },
       {
         property: "og:description",
         content:
-          "MERN Stack · AI Agents · Automation. AI-powered systems and real-time applications, from idea to deployment.",
+          "MERN Stack · AI Agents · Automation. Creating AI-powered systems and real-time applications that turn ideas into working products.",
       },
     ],
   }),
@@ -63,7 +63,7 @@ const recognition = [
     accent: "gold" as const,
     title: "Movellea — AI Story Visualization",
     body: "Approved for major funding under the MSME Idea Hackathon 5.0. Movellea is an AI pipeline that converts books into cinematic narrative outputs by automating scene generation and story structuring.",
-    tags: ["MSME 5.0", "AI Pipeline"],
+    tags: ["MSME 5.0"],
   },
   {
     image: "/images/serviceeenoww.png",
@@ -73,6 +73,16 @@ const recognition = [
     title: "ServiceNow AI Skills Summit 2026",
     body: "Participated in the AI Skills Summit at Coimbatore, exploring the edge of automation and enterprise AI integration alongside industry leaders.",
     tags: ["Coimbatore", "ServiceNow"],
+  },
+  {
+    image: "/images/summoned.png",
+    alt: "Summoned for Nothing — Runner-Up at NIT Rourkela National Game Jam",
+    badge: "Runner-Up",
+    accent: "coral" as const,
+    title: "Runner-Up · NIT Rourkela × GDAI National Game Jam",
+    body: "Built Summoned for Nothing — a complete game in 36 hours using Unity, from concept to fully playable, under strict time constraints. Hosted by National Institute of Technology Rourkela in collaboration with the Game Developers Association of India.",
+    tags: ["NIT Rourkela", "Unity", "Remote"],
+    portrait: true,
   },
   {
     image: "/images/IMG-20260325-WA0085.jpg.jpeg",
@@ -172,7 +182,7 @@ function Home() {
               />
 
               <p className="mt-6 max-w-[42ch] text-pretty text-sm leading-relaxed text-ink/70 md:text-base">
-                Full-stack product developer building MERN applications, AI agents and automation — {profile.summary.toLowerCase()}
+                Full-stack developer building MERN applications, AI agents, and automation — {profile.summary.toLowerCase()}
               </p>
 
             </div>
@@ -538,7 +548,7 @@ function Home() {
                     i % 2 === 1 ? "md:[direction:rtl]" : ""
                   }`}
                 >
-                  <div className="bg-paper-deep p-3 sm:p-4 md:col-span-7 md:[direction:ltr]">
+                  <div className={`bg-paper-deep p-3 sm:p-4 md:[direction:ltr] ${'portrait' in r && r.portrait ? 'md:col-span-4' : 'md:col-span-7'}`}>
                     <CurtainWipe direction={i % 2 === 1 ? "left" : "up"}>
                       <SmartImage
                         fallbackLabel={r.badge}
@@ -551,7 +561,7 @@ function Home() {
                     </CurtainWipe>
                   </div>
 
-                  <div className="flex flex-col justify-center gap-3 py-5 md:col-span-5 md:px-8 md:py-6 md:[direction:ltr]">
+                  <div className={`flex flex-col justify-center gap-3 py-5 md:px-8 md:py-6 md:[direction:ltr] ${'portrait' in r && r.portrait ? 'md:col-span-8' : 'md:col-span-5'}`}>
                     <div className="flex items-center gap-2">
                       <span className={`size-2 rounded-full ${accentDot[r.accent]}`} />
                       <span className="eyebrow text-ink/50">{r.badge}</span>
@@ -612,8 +622,7 @@ function Home() {
             />
 
             <p className="mt-4 max-w-[46ch] text-sm text-ink/65">
-              Open to meaningful projects and collaborations. Typically respond within
-              24–48 hours.
+              Open to opportunities and collaborations.
             </p>
           </div>
           <div className="flex flex-col gap-3 text-sm">
@@ -646,6 +655,15 @@ function Home() {
               <span className="eyebrow text-ink/45">LinkedIn</span>
               <span className="ink-link text-ink/80 transition-colors group-hover:text-ink">
                 Connect
+              </span>
+            </a>
+            <a
+              href={`tel:${profile.phone}`}
+              className="group flex flex-wrap items-center justify-between gap-x-6 gap-y-1 border-b border-border py-2 transition-colors hover:border-ink/40"
+            >
+              <span className="eyebrow text-ink/45">Phone</span>
+              <span className="ink-link text-ink/80 transition-colors group-hover:text-ink">
+                {profile.phone}
               </span>
             </a>
           </div>

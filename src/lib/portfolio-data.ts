@@ -1,15 +1,15 @@
 export const profile = {
   name: "Mohammed Shahzaman",
-  role: "Full-Stack Product Developer",
+  role: "Full-Stack Developer",
   discipline: "MERN Stack · AI Agents · Automation",
   summary:
-    "Building AI-powered systems and real-time applications — from idea to deployment.",
-  award: "Rs. 13.6 Lakhs funded · MSME 5.0 Hackathon 2026",
+    "Creating AI-powered systems and real-time applications that turn ideas into working products.",
+  award: "Rs. 13.6 Lakhs funded · MSME 5.0 Hackathon 2025",
   location: "Hyderabad, Telangana, India",
   education:
-    "B.Tech in Electronics & Communication Engineering · CMR College (2023–27)",
+    "B.Tech in Electronics & Communication Engineering · CMR College of Engineering and Technology (CMRCET) (2023–27)",
   email: "mohammedzama9024@gmail.com",
-  phone: "+91 8121364055",
+  phone: "+91 8121362405",
   github: "https://github.com/shahzaman",
   linkedin: "https://linkedin.com/in/shahzaman",
 } as const;
@@ -65,15 +65,15 @@ export const projects = [
     index: "03",
     title: "Movellea",
     subtitle: "AI Story Visualization",
-    tech: "Python · AI Pipeline",
+    tech: "Python",
     accent: "violet" as Accent,
     live: null,
     description:
-      "AI pipeline that converts books into cinematic narrative outputs. Funded at MSME 5.0 Hackathon 2026.",
+      "AI pipeline that converts books into cinematic narrative outputs. Funded at MSME 5.0 Hackathon 2025.",
     highlights: [
       "Automates scene generation and story structuring",
       "Cinematic narrative output from book input",
-      "Rs. 13.6 Lakhs funded at MSME 5.0 Hackathon 2026",
+      "Rs. 13.6 Lakhs funded at MSME 5.0 Hackathon 2025",
     ],
   },
   {
@@ -128,7 +128,7 @@ export const skillGroups = [
 export const achievements = [
   {
     label: "Funded — Rs. 13.6 Lakhs",
-    detail: "MSME 5.0 Hackathon 2026 · Movellea (AI Story Visualization)",
+    detail: "MSME 5.0 Hackathon 2025 · Movellea (AI Story Visualization)",
     highlight: true,
   },
   {
