@@ -10,8 +10,8 @@ export const profile = {
     "B.Tech in Electronics & Communication Engineering · CMR College of Engineering and Technology (CMRCET) (2023–27)",
   email: "mohammedzama9024@gmail.com",
   phone: "+91 8121362405",
-  github: "https://github.com/shahzaman",
-  linkedin: "https://linkedin.com/in/shahzaman",
+  github: "https://github.com/Mohd-Shahzaman",
+  linkedin: "https://www.linkedin.com/in/mohammed-shahzaman-ali-8672802b1",
 } as const;
 
 export type Accent = "gold" | "coral" | "teal" | "violet";
